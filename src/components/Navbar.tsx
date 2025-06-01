@@ -88,7 +88,7 @@ const Navbar: FC = () => {
               to="/contact"
               className="px-2 py-1 sm:px-3 sm:py-1.5 border-2 border-purple-700 text-black-700 rounded-lg text-sm xs:text-base sm:text-lg md:text-xl font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
-              Contact Us
+              Contact
             </Link>
           </div>
 
