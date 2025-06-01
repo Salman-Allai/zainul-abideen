@@ -59,34 +59,34 @@ const Navbar: FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1 sm:space-x-2">
+          <div className="hidden md:flex items-center space-x-0.5 sm:space-x-1">
             <Link
               to="/"
-              className="px-2 py-1 sm:px-3 sm:py-1.5 border-2 border-purple-700 text-black-700 rounded-lg text-sm xs:text-base sm:text-lg md:text-xl font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Home
             </Link>
             <Link
               to="/courses"
-              className="px-2 py-1 sm:px-3 sm:py-1.5 border-2 border-purple-700 text-black-700 rounded-lg text-sm xs:text-base sm:text-lg md:text-xl font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Courses
             </Link>
             <Link
               to="/gallery"
-              className="px-2 py-1 sm:px-3 sm:py-1.5 border-2 border-purple-700 text-black-700 rounded-lg text-sm xs:text-base sm:text-lg md:text-xl font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Gallery
             </Link>
             <Link
               to="/about"
-              className="px-2 py-1 sm:px-3 sm:py-1.5 border-2 border-purple-700 text-black-700 rounded-lg text-sm xs:text-base sm:text-lg md:text-xl font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="px-2 py-1 sm:px-3 sm:py-1.5 border-2 border-purple-700 text-black-700 rounded-lg text-sm xs:text-base sm:text-lg md:text-xl font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Contact
             </Link>
