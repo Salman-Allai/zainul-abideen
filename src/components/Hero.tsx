@@ -13,11 +13,11 @@ const Hero = () => {
         </h2>
       </div>
 
-      <section className="pt-8 sm:pt-12 md:pt-20 pb-8 md:pb-16 lg:pt-36 lg:pb-24 px-2 sm:px-4 md:px-6">
+      <section className="pt-16 sm:pt-12 md:pt-20 pb-8 md:pb-16 lg:pt-36 lg:pb-24 px-2 sm:px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Hero Text */}
-            <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 mt-12 sm:mt-0">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-900 mb-4 leading-tight text-center lg:text-left">
                 Learn with our
                 <br className="hidden sm:block" /> expert teachers.
