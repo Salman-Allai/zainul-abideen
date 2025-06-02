@@ -45,7 +45,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex flex-col items-center justify-center">
             {/* Logo */}
-            <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg mb-2">
+            <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
               <img
                 src="/assets/logo.ico"
                 alt="Institute Logo"
@@ -53,7 +53,7 @@ const Navbar = () => {
               />
             </div>
             {/* Institute Name */}
-            <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center mb-2">
+            <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center">
               Zainul Abideen Technical Training Centre
             </span>
           </div>
