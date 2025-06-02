@@ -1,8 +1,8 @@
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { useState, useEffect, FC } from 'react';
+import { useState, useEffect } from 'react';
 
-const Navbar: FC = () => {
+const Navbar = () => {
   const location = useLocation();
   const [showNav, setShowNav] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,49 +44,49 @@ const Navbar: FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex flex-col items-center justify-center">
-            <div className="flex items-center mb-1">
-              <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center mr-2 shadow-lg">
-                <img
-                  src="/assets/logo.ico"
-                  alt="Institute Logo"
-                  className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 object-contain"
-                />
-              </div>
-              <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center">
-                Zainul Abideen Technical Training Centre
-              </span>
+            {/* Logo */}
+            <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg mb-2">
+              <img
+                src="/assets/logo.ico"
+                alt="Institute Logo"
+                className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 object-contain"
+              />
             </div>
+            {/* Institute Name */}
+            <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center mb-2">
+              Zainul Abideen Technical Training Centre
+            </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-0.5 sm:space-x-1">
+          <div className="hidden md:flex items-center space-x-5">
             <Link
               to="/"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Home
             </Link>
             <Link
               to="/courses"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Courses
             </Link>
             <Link
               to="/gallery"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Gallery
             </Link>
             <Link
               to="/about"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black-700 rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
             >
               Contact
             </Link>
