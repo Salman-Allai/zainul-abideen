@@ -1,18 +1,16 @@
+import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
+  const [showImageModal, setShowImageModal] = useState(false);
+
   return (
     <>
-      {/* Moving Welcome Text */}
-      <div className="w-full overflow-hidden bg-purple-700 py-2">
-        <div
-          className="whitespace-nowrap text-white text-sm xs:text-base sm:text-lg md:text-2xl font-bold animate-marquee px-2"
-          style={{
-            animation: 'marquee 16s linear infinite',
-          }}
-        >
-          Welcome to Zainul Abideen Technical Training Centre Accredited by  (NIELIT), Govt. of India • 
-        </div>
+      {/* Welcome Text */}
+      <div className="w-full bg-purple-700 py-3 flex justify-center items-center">
+        <h2 className="text-white text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-center">
+          Welcome to Zainul Abideen Technical Training Centre
+        </h2>
       </div>
 
       <section className="pt-20 pb-8 md:pt-32 md:pb-16 lg:pt-36 lg:pb-24 px-2 sm:px-4 md:px-6">
@@ -63,8 +61,9 @@ const Hero = () => {
                 <img
                   src="/assets/admission.jpg"
                   alt="Student with laptop"
-                  className="w-48 xs:w-56 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-xl shadow-xl z-10 relative border-4 border-white"
+                  className="w-48 xs:w-56 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-xl shadow-xl z-10 relative border-4 border-white cursor-pointer"
                   style={{ background: '#fff' }}
+                  onClick={() => setShowImageModal(true)}
                 />
                 <div className="absolute -bottom-4 -left-4 w-20 h-20 sm:w-32 sm:h-32 bg-indigo-200 rounded-full opacity-70 z-0"></div>
               </div>
@@ -79,6 +78,21 @@ const Hero = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {showImageModal && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setShowImageModal(false)}
+        >
+          <img
+            src="/assets/admission.jpg"
+            alt="Student with laptop enlarged"
+            className="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-white"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 };
