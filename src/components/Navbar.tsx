@@ -52,14 +52,17 @@ const Navbar = () => {
       `}
       style={{ transition: 'opacity 0.4s' }}
     >
-      {/* Main Navbar with consistent margin to move downward */}
+      {/* Main Navbar with equal padding and margin on all sides */}
       <div
         className={`transition-all duration-300 ${
           isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
-        style={{ marginTop: '48px', paddingTop: '32px', paddingBottom: '32px' }} // marginTop for separation
+        style={{
+          padding: '24px', // Equal padding on all sides
+          margin: '16px',  // Equal margin on all sides
+        }}
       >
-        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Institute Name */}
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
@@ -110,7 +113,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 px-3 py-2" // Same padding as nav links
+            className="md:hidden text-gray-700 px-3 py-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -120,33 +123,57 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden bg-white absolute w-full left-0 right-0 shadow-md transition-all duration-300 ${
-          isMenuOpen ? 'max-h-96 py-4' : 'max-h-0 py-0 overflow-hidden'
-        }`}
-        style={{ marginTop: '48px', paddingTop: '32px' }} // marginTop for mobile menu too
-      >
-        <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
+      {isMenuOpen && (
+        <div
+          className="md:hidden fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 flex flex-col items-start"
+          style={{ minWidth: 200 }}
+        >
+          {/* Cross Button */}
+          <button
+            className="mb-2 text-gray-700 self-end hover:text-purple-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
           {/* Navigation Links ONLY */}
-          <div>
-            <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
-              Home
-            </Link>
-            <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
-              Courses
-            </Link>
-            <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
-              Gallery
-            </Link>
-            <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
-              About
-            </Link>
-            <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
-              Contact Us
-            </Link>
-          </div>
+          <Link
+            to="/"
+            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/courses"
+            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Courses
+          </Link>
+          <Link
+            to="/gallery"
+            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Gallery
+          </Link>
+          <Link
+            to="/about"
+            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left block hover:text-purple-700"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact Us
+          </Link>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
