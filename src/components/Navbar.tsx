@@ -34,71 +34,81 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        fixed top-12 left-0 right-0 z-50 transition-all duration-300
-        ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}
+        fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}
         ${showNav ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
       `}
       style={{ transition: 'opacity 0.4s' }}
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
-          {/* Logo and Institute Name in a Row */}
-          <div className="flex items-center space-x-3">
-            {/* Logo */}
-            <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
-              <img
-                src="/assets/logo.ico"
-                alt="Institute Logo"
-                className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 object-contain"
-              />
+      {/* Welcome Bar */}
+      <div className="bg-purple-700 text-white text-center py-2 text-sm sm:text-base font-semibold">
+        Welcome to Zainul Abideen Technical Training Centre
+      </div>
+
+      {/* Actual Navbar */}
+      <div
+        className={`transition-all duration-300 ${
+          isScrolled ? 'bg-white py-3 shadow-md' : 'bg-transparent py-5'
+        }`}
+      >
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex justify-between items-center">
+            {/* Logo and Institute Name */}
+            <div className="flex items-center space-x-3">
+              <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
+                <img
+                  src="/assets/logo.ico"
+                  alt="Institute Logo"
+                  className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 object-contain"
+                />
+              </div>
+              <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center">
+                Zainul Abideen Technical Training Centre
+              </span>
             </div>
-            {/* Institute Name */}
-            <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center">
-              Zainul Abideen Technical Training Centre
-            </span>
-          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-5">
-            <Link
-              to="/"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/courses"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
-            >
-              Courses
-            </Link>
-            <Link
-              to="/gallery"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
-            >
-              Gallery
-            </Link>
-            <Link
-              to="/about"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
-            >
-              Contact
-            </Link>
-          </div>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-5">
+              <Link
+                to="/"
+                className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/courses"
+                className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              >
+                Courses
+              </Link>
+              <Link
+                to="/gallery"
+                className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              >
+                Gallery
+              </Link>
+              <Link
+                to="/about"
+                className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="px-1.5 py-0.5 sm:px-2 sm:py-1 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-700"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-gray-700"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -109,14 +119,6 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
-          {/* Welcome Text */}
-          <span
-            className="text-sm xs:text-base sm:text-lg font-semibold text-purple-900 mb-4 block text-center whitespace-nowrap overflow-x-auto"
-            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
-          >
-            Welcome to Zainul Abideen Technical Training Centre
-          </span>
-
           {/* Logo and Institute Name */}
           <div className="flex items-center space-x-3 mt-6 mb-6">
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
