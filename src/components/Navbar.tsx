@@ -69,7 +69,7 @@ const Navbar = () => {
               <img
                 src="/assets/logo.ico"
                 alt="Institute Logo"
-                className="w-14 h-14 xs:w-18 xs:h-18 md:w-20 md:h-20 rounded-xl object-cover"
+                className="w-full h-full rounded-xl object-contain"
                 style={{ objectPosition: 'center' }}
               />
             </div>
