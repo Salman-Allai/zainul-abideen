@@ -69,7 +69,7 @@ const Navbar = () => {
               <img
                 src="/assets/logo.ico"
                 alt="Institute Logo"
-                className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 object-contain" // Match parent div size for all screens
+                className="w-14 h-14 rounded-xl xs:w-16 xs:h-16 sm:w-12 sm:h-12 sm:rounded-md object-contain" // Larger and rounded square on mobile, original on sm+
               />
             </div>
             <span
