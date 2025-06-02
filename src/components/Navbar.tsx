@@ -65,11 +65,12 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Institute Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
+            <div className="w-24 h-24 xs:w-28 xs:h-28 sm:w-20 sm:h-20 bg-white border-2 border-purple-700 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
               <img
                 src="/assets/logo.ico"
                 alt="Institute Logo"
-                className="w-14 h-14 rounded-xl xs:w-16 xs:h-16 sm:w-12 sm:h-12 sm:rounded-md object-contain" // Larger and rounded square on mobile, original on sm+
+                className="w-24 h-24 xs:w-28 xs:h-28 sm:w-20 sm:h-20 rounded-xl object-cover"
+                style={{ objectPosition: 'center' }}
               />
             </div>
             <span
