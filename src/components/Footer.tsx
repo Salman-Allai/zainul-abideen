@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex items-center mb-3">
               <div className="w-12 h-12 bg-white border-2 border-purple-700 rounded-lg flex items-center justify-center mr-3 shadow-lg shadow-purple-200">
                 <img
-                  src="/assets/favicon/favicon.ico"
+                  src="/assets/logo.ico"
                   alt="Institute Logo"
                   className="w-9 h-9 object-contain"
                 />
