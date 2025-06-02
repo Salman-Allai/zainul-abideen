@@ -111,10 +111,10 @@ const Navbar = () => {
         <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
           {/* Welcome Text */}
           <span className="text-lg xs:text-xl sm:text-2xl font-semibold text-purple-900">
-            Welcome to
+            Welcome to Zainul Abideen Technical Training Centre
           </span>
           {/* Logo and Institute Name in a Row with Larger Margin */}
-          <div className="flex items-center space-x-3 mt-8">
+          <div className="flex items-center space-x-3 mt-12">
             {/* Logo */}
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
               <img
