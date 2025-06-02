@@ -11,24 +11,36 @@ const Navbar = () => {
   // Hide navbar after scrolling on any page
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
+      if (typeof window !== 'undefined') {
+        if (window.scrollY === 0) {
+          setShowNav(true);
+        } else {
+          setShowNav(false);
+        }
+        setIsScrolled(window.scrollY > 10);
       }
-      setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname]);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+    return;
+  }, []);
 
-  // Show navbar when mouse moves anywhere on the screen
   useEffect(() => {
     const handleMouseMove = () => {
       setShowNav(true);
     };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('mousemove', handleMouseMove);
+      return () => window.removeEventListener('mousemove', handleMouseMove);
+    }
+    return;
+  }, []);
+
+  // Optional: Close mobile menu on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
   }, [location.pathname]);
 
   return (
@@ -105,6 +117,7 @@ const Navbar = () => {
             <button
               className="md:hidden text-gray-700"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -119,7 +132,7 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
-          {/* Welcome Text */}
+          {/* Welcome Text (optional, remove if you want it only in the top bar) */}
           <span
             className="text-sm xs:text-base sm:text-lg font-semibold text-purple-900 mb-4 block text-center whitespace-nowrap overflow-x-auto"
             style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
@@ -143,19 +156,19 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="mt-6">
-            <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+            <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
-            <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+            <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
               Courses
             </Link>
-            <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+            <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
               Gallery
             </Link>
-            <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+            <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
-            <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+            <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block" onClick={() => setIsMenuOpen(false)}>
               Contact Us
             </Link>
           </div>
