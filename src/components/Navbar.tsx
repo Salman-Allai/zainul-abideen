@@ -110,7 +110,10 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
           {/* Welcome Text */}
-          <span className="text-sm xs:text-base sm:text-lg font-semibold text-purple-900 mb-6 block text-center whitespace-nowrap overflow-x-auto">
+          <span
+            className="text-sm xs:text-base sm:text-lg font-semibold text-purple-900 mb-6 block text-center whitespace-nowrap overflow-x-auto"
+            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
+          >
             Welcome to Zainul Abideen Technical Training Centre
           </span>
 
