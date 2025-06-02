@@ -109,8 +109,13 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
+          {/* Welcome Text */}
+          <span className="text-sm xs:text-base sm:text-lg font-semibold text-purple-900 mb-6 block text-center">
+            Welcome to Zainul Abideen Technical Training Centre
+          </span>
+
           {/* Logo and Institute Name */}
-          <div className="flex items-center space-x-3 mt-10 mb-8">
+          <div className="flex items-center space-x-3 mb-8">
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
               <img
                 src="/assets/logo.ico"
@@ -124,7 +129,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="mt-4">
+          <div className="mt-6">
             <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
               Home
             </Link>
