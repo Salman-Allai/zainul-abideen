@@ -74,16 +74,25 @@ const Navbar = () => {
               />
             </div>
             <span
-              className="whitespace-normal text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-purple-900 leading-tight text-center"
+              className="
+                text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-purple-900 leading-tight text-center
+                flex flex-col xs:flex-row xs:items-center
+              "
               style={{
                 overflow: 'visible',
                 textOverflow: 'unset',
                 maxWidth: 'none',
-                display: 'inline',
+                display: 'flex',
+                alignItems: 'center',
               }}
               title="Zainul Abideen Technical Training Centre"
             >
-              Zainul Abideen Technical Training Centre
+              <span className="block xs:inline">
+                Zainul Abideen Technical IT
+              </span>
+              <span className="block xs:ml-2 xs:inline xs:mt-0 mt-1 text-center">
+                Training Centre
+              </span>
             </span>
           </div>
 
