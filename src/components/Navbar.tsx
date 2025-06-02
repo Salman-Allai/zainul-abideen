@@ -113,8 +113,8 @@ const Navbar = () => {
           <span className="text-lg xs:text-xl sm:text-2xl font-semibold text-purple-900">
             Welcome to
           </span>
-          {/* Logo and Institute Name in a Row with Margin */}
-          <div className="flex items-center space-x-3 mt-4">
+          {/* Logo and Institute Name in a Row with Larger Margin */}
+          <div className="flex items-center space-x-3 mt-8">
             {/* Logo */}
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
               <img
