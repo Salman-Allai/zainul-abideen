@@ -72,7 +72,16 @@ const Navbar = () => {
                 className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 object-contain"
               />
             </div>
-            <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-purple-900 leading-tight text-center">
+            <span
+              className="whitespace-nowrap text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-purple-900 leading-tight text-center"
+              style={{
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                maxWidth: '100vw', // Allow full viewport width on mobile
+                display: 'inline-block',
+              }}
+              title="Zainul Abideen Technical Training Centre"
+            >
               Zainul Abideen Technical Training Centre
             </span>
           </div>
