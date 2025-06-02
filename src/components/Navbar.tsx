@@ -42,8 +42,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex flex-col items-center justify-center">
+          {/* Logo and Institute Name in a Row */}
+          <div className="flex items-center space-x-3">
             {/* Logo */}
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
               <img
