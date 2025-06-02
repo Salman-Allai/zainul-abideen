@@ -109,11 +109,42 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-2 sm:space-y-4">
-          <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">Home</Link>
-          <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">Courses</Link>
-          <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">Gallery</Link>
-          <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">About</Link>
-          <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">Contact Us</Link>
+          {/* Welcome Text */}
+          <span className="text-lg xs:text-xl sm:text-2xl font-semibold text-purple-900">
+            Welcome to
+          </span>
+          {/* Logo and Institute Name in a Row with Margin */}
+          <div className="flex items-center space-x-3 mt-4">
+            {/* Logo */}
+            <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
+              <img
+                src="/assets/logo.ico"
+                alt="Institute Logo"
+                className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 object-contain"
+              />
+            </div>
+            {/* Institute Name */}
+            <span className="text-base xs:text-lg sm:text-xl font-semibold text-purple-900 leading-tight">
+              Zainul Abideen Technical Training Centre
+            </span>
+          </div>
+
+          {/* Navigation Links */}
+          <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
+            Home
+          </Link>
+          <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
+            Courses
+          </Link>
+          <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
+            Gallery
+          </Link>
+          <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
+            About
+          </Link>
+          <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
+            Contact Us
+          </Link>
         </div>
       </div>
     </nav>
