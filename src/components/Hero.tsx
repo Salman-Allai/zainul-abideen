@@ -7,13 +7,13 @@ const Hero = () => {
   return (
     <>
       {/* Welcome Text */}
-      <div className="w-full bg-purple-700 py-3 flex justify-center items-center">
+      <div className="w-full bg-purple-700 py-3 flex justify-center items-center mb-4 xs:mb-6">
         <h2 className="text-white text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-center">
           Welcome to Zainul Abideen Technical Training Centre
         </h2>
       </div>
 
-      <section className="pt-20 pb-8 md:pt-32 md:pb-16 lg:pt-36 lg:pb-24 px-2 sm:px-4 md:px-6">
+      <section className="pt-8 sm:pt-12 md:pt-20 pb-8 md:pb-16 lg:pt-36 lg:pb-24 px-2 sm:px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Hero Text */}
