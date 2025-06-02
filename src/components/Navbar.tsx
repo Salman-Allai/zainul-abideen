@@ -115,7 +115,7 @@ const Navbar = () => {
           </span>
 
           {/* Logo and Institute Name */}
-          <div className="flex items-center space-x-3 mt-6 mb-6">
+          <div className="flex items-center space-x-3 mt-10 mb-8">
             <div className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-white border-2 border-purple-700 rounded-md flex items-center justify-center shadow-lg">
               <img
                 src="/assets/logo.ico"
@@ -129,21 +129,23 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
-            Home
-          </Link>
-          <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
-            Courses
-          </Link>
-          <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
-            Gallery
-          </Link>
-          <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
-            About
-          </Link>
-          <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100">
-            Contact Us
-          </Link>
+          <div className="mt-4">
+            <Link to="/" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+              Home
+            </Link>
+            <Link to="/courses" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+              Courses
+            </Link>
+            <Link to="/gallery" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+              Gallery
+            </Link>
+            <Link to="/about" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+              About
+            </Link>
+            <Link to="/contact" className="text-base xs:text-lg sm:text-xl font-normal py-2 border-b border-gray-100 block">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
