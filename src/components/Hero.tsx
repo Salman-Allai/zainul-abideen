@@ -7,13 +7,13 @@ const Hero = () => {
   return (
     <>
       {/* Welcome Text */}
-      <div className="w-full bg-purple-700 py-3 flex justify-center items-center mb-4 xs:mb-6">
+      <div className="w-full bg-purple-700 py-3 flex justify-center items-center mb-10">
         <h2 className="text-white text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-center">
           Welcome to Zainul Abideen Technical Training Centre
         </h2>
       </div>
 
-      <section className="pt-16 sm:pt-12 md:pt-20 pb-8 md:pb-16 lg:pt-36 lg:pb-24 px-2 sm:px-4 md:px-6">
+      <section className="pt-8 sm:pt-8 md:pt-12 pb-8 md:pb-16 lg:pt-20 lg:pb-24 px-2 sm:px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Hero Text */}
@@ -57,15 +57,15 @@ const Hero = () => {
             {/* Hero Image */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
               <div className="relative">
-                <div className="absolute top-4 -right-4 w-48 h-48 sm:w-64 sm:h-64 bg-purple-600 rounded-tr-3xl rounded-bl-3xl z-0"></div>
+                <div className="absolute top-4 -right-4 w-40 h-40 sm:w-52 sm:h-52 bg-purple-600 rounded-tr-3xl rounded-bl-3xl z-0"></div>
                 <img
                   src="/assets/admission.jpg"
                   alt="Student with laptop"
-                  className="w-48 xs:w-56 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-xl shadow-xl z-10 relative border-4 border-white cursor-pointer"
+                  className="w-40 xs:w-52 sm:w-64 md:w-72 lg:w-80 h-auto object-cover rounded-xl shadow-xl z-10 relative border-4 border-white cursor-pointer"
                   style={{ background: '#fff' }}
                   onClick={() => setShowImageModal(true)}
                 />
-                <div className="absolute -bottom-4 -left-4 w-20 h-20 sm:w-32 sm:h-32 bg-indigo-200 rounded-full opacity-70 z-0"></div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 sm:w-24 sm:h-24 bg-indigo-200 rounded-full opacity-70 z-0"></div>
               </div>
             </div>
           </div>
