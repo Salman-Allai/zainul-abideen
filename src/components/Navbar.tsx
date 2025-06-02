@@ -67,7 +67,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-3">
             <div className="w-16 h-16 xs:w-20 xs:h-20 md:w-24 md:h-24 bg-white border-2 border-purple-700 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
               <img
-                src="/assets/favicon/favicon.ico"
+                src="/assets/logo.ico"
                 alt="Institute Logo"
                 className="w-14 h-14 xs:w-18 xs:h-18 md:w-20 md:h-20 rounded-xl object-cover"
                 style={{ objectPosition: 'center' }}
@@ -76,7 +76,7 @@ const Navbar = () => {
             <span
               className="
                 text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-purple-900 leading-tight text-center
-                flex flex-col xs:flex-row xs:items-center
+                flex flex-row items-center
               "
               style={{
                 overflow: 'visible',
@@ -87,12 +87,7 @@ const Navbar = () => {
               }}
               title="Zainul Abideen Technical Training Centre"
             >
-              <span className="block xs:inline">
-                Zainul Abideen Technical IT
-              </span>
-              <span className="block xs:ml-2 xs:inline xs:mt-0 mt-1 text-center">
-                Training Centre
-              </span>
+              Zainul Abideen Technical Training Centre
             </span>
           </div>
 
