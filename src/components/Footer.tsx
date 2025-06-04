@@ -7,14 +7,17 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-3">
-              <div className="w-12 h-12 bg-white border-2 border-purple-700 rounded-lg flex items-center justify-center mr-3 shadow-lg shadow-purple-200">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex items-center justify-center">
                 <img
-                  src="/assets/logo.ico"
+                  src="/assets/logo1.ico"
                   alt="Institute Logo"
-                  className="w-9 h-9 object-contain"
+                  className="w-full h-full rounded-full object-contain"
+                  style={{ objectPosition: 'center' }}
                 />
               </div>
-              <span className="text-xl sm:text-2xl font-bold text-purple-900">Zainul Abideen Technical Training Centre</span>
+              <span className="ml-1 text-xl sm:text-2xl font-bold text-purple-900">
+                Zainul Abideen Technical Training Centre
+              </span>
             </div>
             <p className="text-black-600 text-base sm:text-lg mb-3">
               Transforming Kashmir’s Youth Through Quality IT Education.
