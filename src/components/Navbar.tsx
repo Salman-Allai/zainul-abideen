@@ -65,9 +65,9 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Institute Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center  overflow-hidden">
+            <div className="w-28 h-28 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center  overflow-hidden">
               <img
-                src="/assets/logo1.ico"
+                src="/assets/logo1.png"
                 alt="Institute Logo"
                 className="w-24 h-24 rounded-full object-contain"
                 style={{ objectPosition: 'center' }}

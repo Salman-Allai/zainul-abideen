@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex items-center mb-3">
               <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex items-center justify-center">
                 <img
-                  src="/assets/logo1.ico"
+                  src="/assets/logo1.png"
                   alt="Institute Logo"
                   className="w-full h-full rounded-full object-contain"
                   style={{ objectPosition: 'center' }}
