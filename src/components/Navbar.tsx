@@ -47,25 +47,19 @@ const Navbar = () => {
     <nav
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}
-        ${showNav ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
+        bg-[#f0f4f8]  // Use the same background as your main page, or set to transparent if your page has no color
       `}
       style={{ transition: 'opacity 0.4s' }}
     >
       {/* Main Navbar with equal padding and margin on all sides */}
       <div
-        className={`transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-        }`}
-        style={{
-          padding: '24px', // Equal padding on all sides
-          margin: '16px',  // Equal margin on all sides
-        }}
+        className="transition-all duration-300"
+        style={{}}
       >
-        <div className="container mx-auto flex justify-between items-center">
-          {/* Logo and Institute Name */}
+        <div className="container mx-auto flex justify-between items-center py-1 px-1 sm:py-2 sm:px-3 md:py-3 md:px-4">
+          {/* Logo and Institute Name - LEFT */}
           <div className="flex items-center space-x-3">
-            <div className="w-28 h-28 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center  overflow-hidden">
+            <div className="w-28 h-28 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center overflow-hidden">
               <img
                 src="/assets/logo1.png"
                 alt="Institute Logo"
@@ -91,7 +85,7 @@ const Navbar = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - RIGHT */}
           <div className="hidden md:flex items-center space-x-5">
             <Link
               to="/"
@@ -125,7 +119,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - RIGHT */}
           <button
             className="md:hidden text-gray-700 px-3 py-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -139,53 +133,55 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-          className="md:hidden fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 flex flex-col items-start"
-          style={{ minWidth: 200 }}
+          className="md:hidden fixed top-0 right-0 h-full w-[40vw] max-w-xs z-50 bg-white shadow-lg flex flex-col items-start transition-transform duration-300"
+          style={{ transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)' }}
         >
           {/* Cross Button */}
           <button
-            className="mb-2 text-gray-700 self-end hover:text-purple-700 transition-colors"
+            className="mt-4 mb-4 mr-4 ml-auto text-gray-700 hover:text-purple-700 transition-colors"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close menu"
           >
             <X size={28} />
           </button>
           {/* Navigation Links ONLY */}
-          <Link
-            to="/"
-            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            to="/courses"
-            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Courses
-          </Link>
-          <Link
-            to="/gallery"
-            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Gallery
-          </Link>
-          <Link
-            to="/about"
-            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left border-b-2 border-purple-300 block hover:text-purple-700"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            to="/contact"
-            className="text-base xs:text-lg sm:text-xl font-normal px-3 py-2 w-full text-left block hover:text-purple-700"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact Us
-          </Link>
+          <nav className="flex flex-col w-full">
+            <Link
+              to="/"
+              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              to="/courses"
+              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Courses
+            </Link>
+            <Link
+              to="/gallery"
+              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+            <Link
+              to="/about"
+              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 hover:text-purple-700 w-full text-left"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </nav>
         </div>
       )}
     </nav>

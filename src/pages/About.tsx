@@ -1,9 +1,6 @@
-import React from 'react';
-import BackToHome from '../components/BackToHome';
-
 const About: React.FC = () => (
   <div className="min-h-screen flex flex-col items-center justify-center bg-white px-2 py-6 sm:py-10">
-    <BackToHome />
+    {/* <BackToHome /> Removed BackToHome component */}
 
     <main className="w-full max-w-5xl mx-auto flex flex-col justify-center items-center min-h-screen">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-700 text-center mb-8 sm:mb-10">
@@ -28,7 +25,6 @@ const About: React.FC = () => (
         <ul className="list-disc list-inside text-base sm:text-xl text-black font-medium space-y-2 max-w-2xl mx-auto">
           <li>Accredited by National Institute of Electronics and Information Technology (NIELIT), Govt. of India</li>
           <li>Approved Vocational Training Provider (VTP) by Director General of Employment and Training (DGE&T)</li>
-
         </ul>
       </section>
 

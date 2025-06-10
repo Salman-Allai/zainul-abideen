@@ -3,14 +3,29 @@ import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   const [showImageModal, setShowImageModal] = useState(false);
+  const [showFormModal, setShowFormModal] = useState(false);
+  const [form, setForm] = useState({
+    name: '',
+    fatherName: '',
+    motherName: '',
+    email: '',
+    phone: '',
+    address: '',
+    education: '',
+    occupation: '',
+    gender: '',
+    category: '',
+    maritalStatus: '',
+    dob: '',
+  });
 
   return (
     <>
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-8 md:pb-16 lg:pt-20 lg:pb-24 px-2 sm:px-4 md:px-6">
+      <section className="pt-4 sm:pt-6 md:pt-10 pb-8 md:pb-16 lg:pt-10 lg:pb-24 px-2 sm:px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Hero Text */}
-            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 mt-12 sm:mt-0">
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 mt-0 sm:mt-0">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-900 mb-4 leading-tight text-center lg:text-left">
                 Learn with our
                 <br className="hidden sm:block" /> expert teachers.
@@ -32,7 +47,7 @@ const Hero = () => {
                     }
                   }}
                 >
-                  View our new courses
+                  View new courses
                   <ChevronRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                 </button>
                 <a
@@ -65,9 +80,13 @@ const Hero = () => {
 
           {/* Admissions Banner */}
           <div className="w-full flex justify-center z-30 relative">
-            <div className="bg-green-600 text-white font-bold px-6 py-2 rounded-full shadow-lg animate-bounce mt-4">
+            <button
+              className="bg-green-600 text-white font-bold px-6 py-2 rounded-full shadow-lg animate-bounce mt-4 focus:outline-none"
+              onClick={() => setShowFormModal(true)}
+              type="button"
+            >
               Admissions Open for 2025 – Apply Now!
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -84,6 +103,164 @@ const Hero = () => {
             className="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-white"
             onClick={e => e.stopPropagation()}
           />
+        </div>
+      )}
+
+      {/* Form Modal */}
+      {showFormModal && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setShowFormModal(false)}
+        >
+          <form
+            className="bg-white rounded-xl p-6 w-full max-w-sm shadow-2xl flex flex-col gap-4"
+            onClick={e => e.stopPropagation()}
+            onSubmit={e => {
+              e.preventDefault();
+              // WhatsApp integration
+              const phoneNumber = "917006280132"; // Replace with your WhatsApp number
+              const text =
+                `Admission Enquiry:%0A` +
+                `Name: ${form.name}%0A` +
+                `Father's Name: ${form.fatherName}%0A` +
+                `Mother's Name: ${form.motherName}%0A` +
+                `Email: ${form.email}%0A` +
+                `Phone: ${form.phone}%0A` +
+                `Address: ${form.address}%0A` +
+                `Education: ${form.education}%0A` +
+                `Occupation: ${form.occupation}%0A` +
+                `Gender: ${form.gender}%0A` +
+                `Category: ${form.category}%0A` +
+                `Marital Status: ${form.maritalStatus}%0A` +
+                `DOB: ${form.dob}`;
+              window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+              setShowFormModal(false);
+            }}
+          >
+            <h2 className="text-lg font-bold mb-2 text-purple-900">Admission Enquiry</h2>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="border rounded px-3 py-2"
+              value={form.name}
+              onChange={e => setForm({ ...form, name: e.target.value })}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Father's Name"
+              className="border rounded px-3 py-2"
+              value={form.fatherName}
+              onChange={e => setForm({ ...form, fatherName: e.target.value })}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Mother's Name"
+              className="border rounded px-3 py-2"
+              value={form.motherName}
+              onChange={e => setForm({ ...form, motherName: e.target.value })}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="border rounded px-3 py-2"
+              value={form.email}
+              onChange={e => setForm({ ...form, email: e.target.value })}
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="border rounded px-3 py-2"
+              value={form.phone}
+              onChange={e => setForm({ ...form, phone: e.target.value })}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Address"
+              className="border rounded px-3 py-2"
+              value={form.address}
+              onChange={e => setForm({ ...form, address: e.target.value })}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Educational Qualification"
+              className="border rounded px-3 py-2"
+              value={form.education}
+              onChange={e => setForm({ ...form, education: e.target.value })}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Occupation"
+              className="border rounded px-3 py-2"
+              value={form.occupation}
+              onChange={e => setForm({ ...form, occupation: e.target.value })}
+              required
+            />
+            <select
+              className="border rounded px-3 py-2"
+              value={form.gender}
+              onChange={e => setForm({ ...form, gender: e.target.value })}
+              required
+            >
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <select
+              className="border rounded px-3 py-2"
+              value={form.category}
+              onChange={e => setForm({ ...form, category: e.target.value })}
+              required
+            >
+              <option value="">Select Category</option>
+              <option value="General">General</option>
+              <option value="OBC">OBC</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+              <option value="Other">Other</option>
+            </select>
+            <select
+              className="border rounded px-3 py-2"
+              value={form.maritalStatus}
+              onChange={e => setForm({ ...form, maritalStatus: e.target.value })}
+              required
+            >
+              <option value="">Marital Status</option>
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+              <option value="Other">Other</option>
+            </select>
+            <input
+              type="date"
+              placeholder="Date of Birth"
+              className="border rounded px-3 py-2"
+              value={form.dob}
+              onChange={e => setForm({ ...form, dob: e.target.value })}
+              required
+            />
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                className="px-4 py-2 rounded bg-gray-200 text-gray-700"
+                onClick={() => setShowFormModal(false)}
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="px-4 py-2 rounded bg-green-600 text-white font-bold hover:bg-green-700"
+              >
+                Send 
+              </button>
+            </div>
+          </form>
         </div>
       )}
     </>

@@ -1,9 +1,7 @@
 import React from 'react';
-import BackToHome from '../components/BackToHome';
 
 const Contact: React.FC = () => (
   <div className="relative flex flex-col items-center justify-center min-h-[60vh] bg-white pt-2 px-2 sm:px-4">
-    <BackToHome />
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-900 mb-4 mt-8 text-center">Contact us</h1>
     <p className="text-lg sm:text-xl md:text-2xl text-black-700 mb-8 text-center max-w-xl">
       We'd love to hear from you! Fill out the form below or reach us directly at{' '}
@@ -13,7 +11,6 @@ const Contact: React.FC = () => (
       >
           info@zainulabideen.in
       </a>
-      
     </p>
 
     {/* Contact Details */}

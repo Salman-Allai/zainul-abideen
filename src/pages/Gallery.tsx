@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BackToHome from '../components/BackToHome';
 
 const images = [
   '/assets/gall1.jpeg',
@@ -34,7 +33,6 @@ const Gallery: React.FC = () => {
           />
         ))}
       </div>
-      <BackToHome />
 
       {/* Fullscreen Modal */}
       {fullscreenIdx !== null && (
