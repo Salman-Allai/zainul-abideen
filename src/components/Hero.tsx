@@ -110,7 +110,7 @@ const Hero = () => {
       {showFormModal && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-start justify-center z-50"
-          style={{ paddingTop: '130px' }} // Increased from 60px to 90px for more space below navbar
+          style={{ paddingTop: '100px' }} // Increased from 60px to 90px for more space below navbar
           onClick={() => setShowFormModal(false)}
         >
           <form
