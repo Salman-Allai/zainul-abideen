@@ -110,11 +110,11 @@ const Hero = () => {
       {showFormModal && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-start justify-center z-50"
-          style={{ paddingTop: '100px' }} // Increased from 60px to 90px for more space below navbar
+          style={{ paddingTop: '110px' }} // Increased padding for mobile
           onClick={() => setShowFormModal(false)}
         >
           <form
-            className="bg-white rounded-xl p-4 sm:p-6 w-[95vw] max-w-sm shadow-2xl flex flex-col gap-4 max-h-[calc(100vh-90px)] overflow-y-auto mt-0"
+            className="bg-white rounded-xl p-4 sm:p-6 w-[98vw] max-w-sm shadow-2xl flex flex-col gap-4 max-h-[calc(100vh-110px)] overflow-y-auto mt-0"
             onClick={e => e.stopPropagation()}
             onSubmit={e => {
               e.preventDefault();
@@ -236,7 +236,7 @@ const Hero = () => {
               onChange={e => setForm({ ...form, dob: e.target.value })}
               required
             />
-            <div className="flex justify-end gap-2">
+            <div className="flex flex-col sm:flex-row justify-end gap-2">
               <button
                 type="button"
                 className="px-4 py-2 rounded bg-gray-200 text-gray-700"
