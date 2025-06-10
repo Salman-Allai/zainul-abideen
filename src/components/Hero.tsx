@@ -128,7 +128,6 @@ const Hero = () => {
                 `Phone: ${form.phone}%0A` +
                 `Address: ${form.address}%0A` +
                 `Education: ${form.education}%0A` +
-                `Occupation: ${form.occupation}%0A` +
                 `Gender: ${form.gender}%0A` +
                 `Category: ${form.category}%0A` +
                 `Marital Status: ${form.maritalStatus}%0A` +
@@ -192,14 +191,6 @@ const Hero = () => {
               className="border rounded px-3 py-2"
               value={form.education}
               onChange={e => setForm({ ...form, education: e.target.value })}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Occupation"
-              className="border rounded px-3 py-2"
-              value={form.occupation}
-              onChange={e => setForm({ ...form, occupation: e.target.value })}
               required
             />
             <select
