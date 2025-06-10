@@ -10,7 +10,8 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="pt-28"> {/* Adjust pt-20 as needed for your navbar height */}
+      <div className="pt-[60px] bg-[#f0f4f8] min-h-screen">
+        {/* Adjust pt-[60px] to match your navbar height exactly */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />

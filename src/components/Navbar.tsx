@@ -47,29 +47,26 @@ const Navbar = () => {
     <nav
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        bg-[#f0f4f8]  // Use the same background as your main page, or set to transparent if your page has no color
+        bg-[#f0f4f8]
       `}
       style={{ transition: 'opacity 0.4s' }}
     >
-      {/* Main Navbar with equal padding and margin on all sides */}
-      <div
-        className="transition-all duration-300"
-        style={{}}
-      >
-        <div className="container mx-auto flex justify-between items-center py-1 px-1 sm:py-2 sm:px-3 md:py-3 md:px-4">
+      {/* Main Navbar */}
+      <div className="transition-all duration-300">
+        <div className="container mx-auto flex justify-between items-center py-1 px-2 sm:py-2 sm:px-4 md:py-2 md:px-6">
           {/* Logo and Institute Name - LEFT */}
-          <div className="flex items-center space-x-3">
-            <div className="w-28 h-28 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center overflow-hidden">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center overflow-hidden">
               <img
                 src="/assets/logo1.png"
                 alt="Institute Logo"
-                className="w-24 h-24 rounded-full object-contain"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-contain"
                 style={{ objectPosition: 'center' }}
               />
             </div>
             <span
               className="
-                text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-purple-900 leading-tight text-center
+                text-sm xs:text-base sm:text-lg md:text-xl font-bold text-purple-900 leading-tight text-center
                 flex flex-row items-center
               "
               style={{
@@ -78,6 +75,7 @@ const Navbar = () => {
                 maxWidth: 'none',
                 display: 'flex',
                 alignItems: 'center',
+                letterSpacing: '0.5px',
               }}
               title="Zainul Abideen Technical Training Centre"
             >
@@ -86,34 +84,39 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation - RIGHT */}
-          <div className="hidden md:flex items-center space-x-5">
+          <div className="hidden md:flex items-center space-x-3">
             <Link
               to="/"
-              className="px-3 py-2 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-3 py-1.5 border border-purple-700 text-black rounded text-sm font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              style={{ minWidth: 64, textAlign: 'center' }}
             >
               Home
             </Link>
             <Link
               to="/courses"
-              className="px-3 py-2 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-3 py-1.5 border border-purple-700 text-black rounded text-sm font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              style={{ minWidth: 64, textAlign: 'center' }}
             >
               Courses
             </Link>
             <Link
               to="/gallery"
-              className="px-3 py-2 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-3 py-1.5 border border-purple-700 text-black rounded text-sm font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              style={{ minWidth: 64, textAlign: 'center' }}
             >
               Gallery
             </Link>
             <Link
               to="/about"
-              className="px-3 py-2 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-3 py-1.5 border border-purple-700 text-black rounded text-sm font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              style={{ minWidth: 64, textAlign: 'center' }}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="px-3 py-2 border-2 border-purple-700 text-black rounded-lg text-xs xs:text-sm sm:text-base md:text-lg font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              className="px-3 py-1.5 border border-purple-700 text-black rounded text-sm font-medium hover:bg-purple-700 hover:text-white transition-colors"
+              style={{ minWidth: 64, textAlign: 'center' }}
             >
               Contact
             </Link>
@@ -121,7 +124,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button - RIGHT */}
           <button
-            className="md:hidden text-gray-700 px-3 py-2"
+            className="md:hidden text-gray-700 px-2 py-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -133,7 +136,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-          className="md:hidden fixed top-0 right-0 h-full w-[40vw] max-w-xs z-50 bg-white shadow-lg flex flex-col items-start transition-transform duration-300"
+          className="md:hidden fixed top-0 right-0 h-full w-[70vw] max-w-xs z-50 bg-[#f0f4f8] shadow-lg flex flex-col items-start transition-transform duration-300"
           style={{ transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)' }}
         >
           {/* Cross Button */}
@@ -148,35 +151,35 @@ const Navbar = () => {
           <nav className="flex flex-col w-full">
             <Link
               to="/"
-              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              className="text-xs font-normal px-4 py-3 border-b border-purple-200 hover:text-purple-700 w-full text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/courses"
-              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              className="text-xs font-normal px-4 py-3 border-b border-purple-200 hover:text-purple-700 w-full text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               Courses
             </Link>
             <Link
               to="/gallery"
-              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              className="text-xs font-normal px-4 py-3 border-b border-purple-200 hover:text-purple-700 w-full text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
             </Link>
             <Link
               to="/about"
-              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 border-b border-purple-200 hover:text-purple-700 w-full text-left"
+              className="text-xs font-normal px-4 py-3 border-b border-purple-200 hover:text-purple-700 w-full text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-base xs:text-lg sm:text-xl font-normal px-6 py-4 hover:text-purple-700 w-full text-left"
+              className="text-xs font-normal px-4 py-3 hover:text-purple-700 w-full text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact Us

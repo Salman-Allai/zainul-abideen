@@ -113,12 +113,11 @@ const Hero = () => {
           onClick={() => setShowFormModal(false)}
         >
           <form
-            className="bg-white rounded-xl p-6 w-full max-w-sm shadow-2xl flex flex-col gap-4 max-h-[90vh] overflow-y-auto"
+            className="bg-white rounded-xl p-4 sm:p-6 w-[95vw] max-w-sm shadow-2xl flex flex-col gap-4 max-h-[95vh] overflow-y-auto"
             onClick={e => e.stopPropagation()}
             onSubmit={e => {
               e.preventDefault();
-              // WhatsApp integration
-              const phoneNumber = "917006280132"; // Replace with your WhatsApp number
+              const phoneNumber = "917006280132";
               const text =
                 `Admission Enquiry:%0A` +
                 `Name: ${form.name}%0A` +
@@ -137,7 +136,7 @@ const Hero = () => {
               setShowFormModal(false);
             }}
           >
-            <h2 className="text-lg font-bold mb-2 text-purple-900">Admission Enquiry</h2>
+            <h2 className="text-lg font-bold mb-2 text-purple-900 text-center">Admission Enquiry</h2>
             <input
               type="text"
               placeholder="Your Name"
@@ -257,7 +256,7 @@ const Hero = () => {
                 type="submit"
                 className="px-4 py-2 rounded bg-green-600 text-white font-bold hover:bg-green-700"
               >
-                Send 
+                Send
               </button>
             </div>
           </form>
