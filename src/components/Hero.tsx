@@ -113,7 +113,7 @@ const Hero = () => {
           onClick={() => setShowFormModal(false)}
         >
           <form
-            className="bg-white rounded-xl p-6 w-full max-w-sm shadow-2xl flex flex-col gap-4"
+            className="bg-white rounded-xl p-6 w-full max-w-sm shadow-2xl flex flex-col gap-4 max-h-[90vh] overflow-y-auto"
             onClick={e => e.stopPropagation()}
             onSubmit={e => {
               e.preventDefault();
