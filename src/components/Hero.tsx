@@ -110,10 +110,11 @@ const Hero = () => {
       {showFormModal && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          style={{ paddingTop: '60px' }} // Pushes modal below navbar
           onClick={() => setShowFormModal(false)}
         >
           <form
-            className="bg-white rounded-xl p-4 sm:p-6 w-[95vw] max-w-sm shadow-2xl flex flex-col gap-4 max-h-[95vh] overflow-y-auto"
+            className="bg-white rounded-xl p-4 sm:p-6 w-[95vw] max-w-sm shadow-2xl flex flex-col gap-4 max-h-[calc(100vh-60px)] overflow-y-auto mt-0"
             onClick={e => e.stopPropagation()}
             onSubmit={e => {
               e.preventDefault();
