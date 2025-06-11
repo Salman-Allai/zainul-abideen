@@ -1,4 +1,6 @@
 import { FacebookIcon, TwitterIcon, InstagramIcon, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Add this import
+
 const Footer = () => {
   return (
     <footer className="bg-white pt-10 pb-6 px-2 sm:px-4 border-t border-gray-100">
@@ -69,24 +71,24 @@ const Footer = () => {
             <h3 className="text-base sm:text-lg lg:text-base font-semibold text-gray-900 mb-3">Quick Links</h3>
             <ul className="space-y-1">
               <li>
-                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                <Link to="/about" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                <Link to="/courses" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
                   Our Courses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                <Link to="/gallery" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                <Link to="/" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
                   Events
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
