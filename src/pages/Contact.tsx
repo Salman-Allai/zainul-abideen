@@ -44,37 +44,37 @@ const Contact: React.FC = () => {
       </p>
 
       {/* Contact Details */}
-      <div className="w-full max-w-md bg-gray-100 rounded-lg shadow p-4 sm:p-6 mb-8">
+      <div className="w-full max-w-sm bg-gray-100 rounded-lg shadow p-3 sm:p-4 mb-6">
         <div className="mb-4">
-          <span className="font-bold text-sm sm:text-base text-black">Address:</span>
+          <span className="font-bold text-xs sm:text-sm text-black">Address:</span>
           <a
             href="https://www.google.com/maps/search/?api=1&query=Zainul+Abideen+Technical+Training+Centre,+Near+Baghdadi+Restaurant,+Shalteng,+Srinagar,+Jammu+and+Kashmir+190017,+India"
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-sm sm:text-base text-purple-700 hover:text-purple-900 underline mt-1"
+            className="block text-xs sm:text-sm text-purple-700 hover:text-purple-900 underline mt-1"
           >
             View on Google Maps
           </a>
-          <div className="text-black text-sm sm:text-base mt-1">
+          <div className="text-black text-xs sm:text-sm mt-1">
             Zainul Abideen Technical Training Centre,<br />
             Near Baghdadi Restaurant, Shalteng,<br />
             Srinagar, Jammu and Kashmir 190017, India
           </div>
         </div>
         <div className="mb-2">
-          <span className="font-bold text-black text-sm sm:text-base">Phone:</span>
+          <span className="font-bold text-black text-xs sm:text-sm">Phone:</span>
           <a
             href="tel:+917006280132"
-            className="ml-2 text-sm sm:text-base text-purple-700 hover:text-purple-900 underline"
+            className="ml-2 text-xs sm:text-sm text-purple-700 hover:text-purple-900 underline"
           >
             +91 7006280132
           </a>
         </div>
         <div>
-          <span className="font-bold text-black text-sm sm:text-base">Email:</span>
+          <span className="font-bold text-black text-xs sm:text-sm">Email:</span>
           <a
             href="mailto:zacvtp@gmail.com"
-            className="ml-2 text-sm sm:text-base text-purple-700 hover:text-purple-900 underline"
+            className="ml-2 text-xs sm:text-sm text-purple-700 hover:text-purple-900 underline"
           >
             zacvtp@gmail.com
           </a>
@@ -89,13 +89,16 @@ const Contact: React.FC = () => {
             <img
               src="https://maps.googleapis.com/maps/api/staticmap?center=34.083658,74.797368&zoom=15&size=600x200&markers=color:purple%7C34.083658,74.797368&key=YOUR_GOOGLE_MAPS_API_KEY"
               alt="Institute Location Map"
-              className="w-full h-32 sm:h-40 object-cover rounded-lg border cursor-pointer"
-              style={{ minHeight: 100 }}
+              className="w-full h-28 sm:h-36 object-cover rounded-lg border cursor-pointer"
+              style={{ minHeight: 80 }}
               onError={e => (e.currentTarget.style.display = 'none')}
             />
           </a>
         </div>
       </div>
+
+      {/* Add gap between contact details and form */}
+      <div className="h-4" />
 
       <form
         className="w-full max-w-sm bg-gray-50 p-3 sm:p-4 rounded-lg shadow space-y-3 mt-[-24px]"
