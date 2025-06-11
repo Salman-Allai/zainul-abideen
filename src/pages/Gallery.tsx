@@ -18,8 +18,8 @@ const Gallery: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] bg-white py-8 px-2 sm:px-4">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-700 mb-4 text-center">Gallery</h1>
-      <p className="text-base sm:text-lg md:text-2xl text-black-700 mb-8 text-center max-w-xl">
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-700 mb-4 text-center">Gallery</h1>
+      <p className="text-sm sm:text-base md:text-lg text-black-700 mb-8 text-center max-w-xl">
         Take a look at our institute, events, and student activities!
       </p>
       <div className="bg-gray-50 rounded-lg shadow p-4 sm:p-6 max-w-4xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 justify-center">
@@ -28,7 +28,7 @@ const Gallery: React.FC = () => {
             key={idx}
             src={src}
             alt={`Gallery ${idx + 1}`}
-            className="w-full h-56 sm:h-64 md:h-72 object-cover rounded-xl shadow-md border-2 border-purple-100 cursor-pointer"
+            className="w-full h-40 sm:h-48 md:h-56 object-cover rounded-xl shadow-md border-2 border-purple-100 cursor-pointer"
             onClick={() => setFullscreenIdx(idx)}
           />
         ))}
@@ -47,7 +47,7 @@ const Gallery: React.FC = () => {
             onClick={e => e.stopPropagation()}
           />
           <button
-            className="absolute top-4 right-4 text-purple-700 text-3xl font-bold bg-white shadow-lg rounded-full px-3 py-1 hover:bg-gray-100 transition"
+            className="absolute top-4 right-4 text-purple-700 text-2xl font-bold bg-white shadow-lg rounded-full px-3 py-1 hover:bg-gray-100 transition"
             onClick={() => setFullscreenIdx(null)}
             aria-label="Close"
           >

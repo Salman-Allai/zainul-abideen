@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import CourseTopics from '../components/CourseTopics';
-import Footer from '../components/Footer';
 
 const HomePage = () => {
   return (
@@ -19,7 +18,7 @@ const HomePage = () => {
         <Navbar />
         <Hero />
         <CourseTopics />
-        <Footer />
+        {/* Footer component removed */}
         {/* WhatsApp Floating Button */}
         <a
           href="https://wa.me/917006280132"

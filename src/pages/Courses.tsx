@@ -48,10 +48,10 @@ const courseList = [
 const Courses: React.FC = () => (
 	<div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-100 via-white to-purple-200 px-2 py-8 sm:py-12">
 		<main className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center flex-1">
-			<h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-800 text-center mb-6 sm:mb-10 drop-shadow-lg">
+			<h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-purple-800 text-center mb-6 sm:mb-10 drop-shadow-lg">
 				Our Courses
 			</h1>
-			<p className="text-base sm:text-lg md:text-2xl text-gray-800 text-center font-semibold mb-8 sm:mb-12 max-w-2xl">
+			<p className="text-sm sm:text-base md:text-lg text-gray-800 text-center font-semibold mb-8 sm:mb-12 max-w-2xl">
 				Explore our wide range of computer and IT courses designed for all skill
 				levels. Whether you are a beginner or looking to advance your career, we
 				have something for everyone!
@@ -60,13 +60,13 @@ const Courses: React.FC = () => (
 				{courseList.map((course, idx) => (
 					<div
 						key={idx}
-						className="bg-white/90 rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+						className="bg-white/90 rounded-2xl shadow-xl p-4 sm:p-6 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-transform duration-300"
 					>
-						<div className="text-4xl sm:text-5xl mb-3">{course.icon}</div>
-						<h2 className="text-xl sm:text-2xl font-bold text-purple-700 mb-1 text-center">
+						<div className="text-2xl sm:text-3xl mb-2">{course.icon}</div>
+						<h2 className="text-base sm:text-lg md:text-xl font-bold text-purple-700 mb-1 text-center">
 							{course.title}
 						</h2>
-						<p className="text-base sm:text-lg text-black text-center">
+						<p className="text-xs sm:text-sm md:text-base text-black text-center">
 							{course.description}
 						</p>
 					</div>

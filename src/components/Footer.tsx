@@ -5,9 +5,9 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div>
+          <div className="pb-8 lg:pb-0 lg:pr-8 lg:-mt-6">
             <div className="flex items-center mb-3">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex items-center justify-center">
                 <img
                   src="/assets/logo1.png"
                   alt="Institute Logo"
@@ -15,11 +15,13 @@ const Footer = () => {
                   style={{ objectPosition: 'center' }}
                 />
               </div>
-              <span className="ml-1 text-xl sm:text-2xl font-bold text-purple-900">
+              <div className="ml-1 flex flex-col">
+                 <span className="ml-1 text-xl sm:text-xl font-bold text-purple-900">
                 Zainul Abideen Technical Training Centre
               </span>
+              </div>
             </div>
-            <p className="text-black-600 text-base sm:text-lg mb-3">
+            <p className="text-black-600 text-sm sm:text-base lg:text-sm mb-3">
               Transforming Kashmir’s Youth Through Quality IT Education.
             </p>
             <div className="flex space-x-2">
@@ -63,35 +65,71 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Quick Links</h3>
+          <div className="pt-2 lg:pt-0">
+            <h3 className="text-base sm:text-lg lg:text-base font-semibold text-gray-900 mb-3">Quick Links</h3>
             <ul className="space-y-1">
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">About Us</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Our Courses</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Gallery</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Events</a></li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Our Courses
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Events
+                </a>
+              </li>
             </ul>
           </div>
           
           {/* Support */}
-          <div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Support</h3>
+          <div className="pt-2 lg:pt-0">
+            <h3 className="text-base sm:text-lg lg:text-base font-semibold text-gray-900 mb-3">Support</h3>
             <ul className="space-y-1">
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">FAQs</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-black-600 text-base hover:text-purple-700 transition-colors">Contact Us</a></li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Help Center
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  FAQs
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-black-600 text-sm sm:text-base lg:text-sm hover:text-purple-700 transition-colors">
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
           
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Contact Info</h3>
+          <div className="pt-2 lg:pt-0">
+            <h3 className="text-base sm:text-lg lg:text-base font-semibold text-gray-900 mb-3">Contact Info</h3>
             <div className="space-y-2">
               <div className="flex items-start">
                 <MapPin className="w-6 h-6 text-purple-700 mr-2 mt-0.5" />
-                <span className="text-base text-black-600">Shalteng Srinagar (190017), India</span>
+                <span className="text-sm sm:text-base lg:text-sm text-black-600">Shalteng Srinagar (190017), India</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-6 h-6 text-purple-700 mr-2" />
