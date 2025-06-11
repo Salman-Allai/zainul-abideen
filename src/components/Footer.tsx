@@ -16,9 +16,9 @@ const Footer = () => {
                 />
               </div>
               <div className="ml-1 flex flex-col">
-                 <span className="ml-1 text-xl sm:text-xl font-bold text-purple-900">
-                Zainul Abideen Technical Training Centre
-              </span>
+                <span className="ml-1 text-base sm:text-xl font-bold text-purple-900">
+                  Zainul Abideen Technical Training Centre
+                </span>
               </div>
             </div>
             <p className="text-black-600 text-sm sm:text-base lg:text-sm mb-3">

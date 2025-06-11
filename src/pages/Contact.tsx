@@ -98,15 +98,15 @@ const Contact: React.FC = () => {
       </div>
 
       <form
-        className="w-full max-w-md bg-gray-50 p-4 sm:p-6 rounded-lg shadow space-y-4"
+        className="w-full max-w-sm bg-gray-50 p-3 sm:p-4 rounded-lg shadow space-y-3 mt-[-24px]"
         onSubmit={handleSubmit}
       >
         <div>
-          <label className="block text-black-700 font-medium mb-2 text-sm sm:text-base" htmlFor="name">
+          <label className="block text-black-700 font-medium mb-2 text-xs sm:text-sm" htmlFor="name">
             Name
           </label>
           <input
-            className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-purple-700 rounded focus:outline-none focus:border-purple-900 transition-colors text-sm sm:text-base"
+            className="w-full px-2 py-1.5 sm:px-3 sm:py-2 border-2 border-purple-700 rounded focus:outline-none focus:border-purple-900 transition-colors text-xs sm:text-sm"
             type="text"
             id="name"
             placeholder="Your Name"
@@ -116,11 +116,11 @@ const Contact: React.FC = () => {
           />
         </div>
         <div>
-          <label className="block text-black-700 font-medium mb-2 text-sm sm:text-base" htmlFor="email">
+          <label className="block text-black-700 font-medium mb-2 text-xs sm:text-sm" htmlFor="email">
             Email
           </label>
           <input
-            className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-purple-700 rounded focus:outline-none focus:border-purple-900 transition-colors text-sm sm:text-base"
+            className="w-full px-2 py-1.5 sm:px-3 sm:py-2 border-2 border-purple-700 rounded focus:outline-none focus:border-purple-900 transition-colors text-xs sm:text-sm"
             type="email"
             id="email"
             placeholder="you@example.com"
@@ -130,11 +130,11 @@ const Contact: React.FC = () => {
           />
         </div>
         <div>
-          <label className="block text-black-700 font-medium mb-2 text-sm sm:text-base" htmlFor="message">
+          <label className="block text-black-700 font-medium mb-2 text-xs sm:text-sm" htmlFor="message">
             Message
           </label>
           <textarea
-            className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-purple-700 rounded focus:outline-none focus:border-purple-900 transition-colors text-sm sm:text-base"
+            className="w-full px-2 py-1.5 sm:px-3 sm:py-2 border-2 border-purple-700 rounded focus:outline-none focus:border-purple-900 transition-colors text-xs sm:text-sm"
             id="message"
             rows={4}
             placeholder="Your message"
@@ -145,16 +145,16 @@ const Contact: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-2 sm:py-2.5 bg-purple-700 text-white font-bold rounded-lg hover:bg-purple-900 transition-colors text-sm sm:text-base"
+          className="w-full py-1.5 sm:py-2 bg-purple-700 text-white font-bold rounded-lg hover:bg-purple-900 transition-colors text-xs sm:text-sm"
           disabled={status === 'sending'}
         >
           {status === 'sending' ? 'Sending...' : 'Send Message'}
         </button>
         {status === 'sent' && (
-          <div className="text-green-600 text-center mt-2 text-sm">Message sent successfully!</div>
+          <div className="text-green-600 text-center mt-2 text-xs">Message sent successfully!</div>
         )}
         {status === 'error' && (
-          <div className="text-red-600 text-center mt-2 text-sm">Failed to send message. Please try again.</div>
+          <div className="text-red-600 text-center mt-2 text-xs">Failed to send message. Please try again.</div>
         )}
       </form>
     </div>
